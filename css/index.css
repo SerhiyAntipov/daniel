@@ -26,9 +26,9 @@ html {
 }
 
 .congratulation {
-    position     : relative;
-    padding-top  : 5px;
-    /* margin-top: -250px; */
+    position        : relative;
+    /* padding-top  : 5px; */
+    /* margin-top   : -250px; */
 }
 
 .teddy-bear {
@@ -227,7 +227,172 @@ h2.main-text {
     }
 }
 
+
+/* ============================== */
+
 #bulbe {
     position: fixed;
     top     : 0;
+}
+
+/* star ========================== */
+
+.d14 {
+    margin       : 50px 0;
+    height       : 0;
+    width        : 0;
+    position     : relative;
+    border-right : 50px solid transparent;
+    border-bottom: 35px solid var(--color-lite--blue);
+    border-left  : 50px solid transparent;
+    transform    : rotate(35deg) scale(1.5);
+    opacity      : .8;
+    display      : inline-block;
+}
+
+.d14:before,
+.d14:after {
+    content : "";
+    height  : 0;
+    width   : 0;
+    position: absolute;
+}
+
+.d14:before {
+    top          : -26px;
+    left         : -32px;
+    border-bottom: 40px solid var(--color-lite--blue);
+    border-left  : 15px solid transparent;
+    border-right : 15px solid transparent;
+    transform    : rotate(-35deg);
+}
+
+.d14:after {
+    top          : 2px;
+    left         : -53px;
+    border-right : 50px solid transparent;
+    border-bottom: 35px solid var(--color-lite--blue);
+    border-left  : 50px solid transparent;
+    transform    : rotate(-70deg);
+}
+
+/* wagon ==================== */
+
+.wagon.locomotive{
+    width                     : 300px;
+    height                    : 150px;
+    position                  : relative;
+    background-size: 14.4px 3px;
+    background-repeat: repeat-x;
+    background-position: 0 20px, 0 100px;
+    background-color: var(--color-wagon-blue-2);
+    background-image: linear-gradient(90deg, transparent 5px, white 5px), linear-gradient(90deg, transparent 5px, white 5px);
+    /* border-bottom-left-radius : 0 0;
+    border-bottom-right-radius: 0 0; */
+    border-radius: 0;
+}
+
+
+.wagon {
+    width                     : 300px;
+    height                    : 150px;
+    position                  : relative;
+    border-top                : solid 30px var(--color-wagon-blue-1);
+    border-bottom-left-radius : 20px 200px;
+    border-bottom-right-radius: 20px 200px;
+    margin-left               : 20px;
+    margin-bottom: 57px;
+}
+
+.wagon::before {
+    content         : '';
+    width           : 50px;
+    height          : 50px;
+    display         : block;
+    border-radius   : 50%;
+    background-color: var(--color-wagon-grey-2);
+    border          : 20px solid var(--color-wagon-grey-1);
+    position        : absolute;
+    left            : 20px;
+    bottom          : -43px;
+    background-image: radial-gradient(circle, white 8px, transparent 8px)
+}
+
+.wagon::after {
+    content         : '';
+    width           : 50px;
+    height          : 50px;
+    display         : block;
+    border-radius   : 50%;
+    background-color: var(--color-wagon-grey-2);
+    border          : 20px solid var(--color-wagon-grey-1);
+    position        : absolute;
+    right           : 20px;
+    bottom          : -43px;
+    background-image: radial-gradient(circle, white 8px, transparent 8px)
+}
+
+.wagon.wagon-03 {
+    background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
+}
+
+.wagon.wagon-02 {
+    background-color: var(--color-wagon-blue-2);
+}
+
+.wagon.wagon-01 {
+    background-size    : 50px 50px;
+    background-repeat  : repeat;
+    background-position: 25px 25px, 0px 0px;
+    background-color   : var(--color-wagon-blue-2);
+    background-image   : radial-gradient(circle, white 8px, transparent 8px), radial-gradient(circle, white 8px, transparent 8px);
+}
+
+.wagon::after{
+    animation-name: move1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.wagon::before{
+    animation-name: move2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.wagon{
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move1{
+    50% {
+        margin-bottom: 10px;
+        margin-right: 5px;
+    }
+    100%{
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+@keyframes move2{
+    25% {
+        margin-bottom: 10px;
+        margin-right: 5px;
+    }
+    75%{
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+@keyframes rotate{
+    25% {
+        transform: rotate(1deg);
+    }
+    75%{
+        transform: rotate(-1deg);
+    }
 }
