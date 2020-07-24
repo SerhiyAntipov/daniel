@@ -1,6 +1,5 @@
 window.onload = function (event) {
 
-
     // render cloud ====================
     (function cloud() {
         let cloud = document.getElementById("cloud");
@@ -20,24 +19,19 @@ window.onload = function (event) {
         ctxCloud.fill();
     }());
 
-
-
-    // Render  Canvas -> Teddy Bear String
+    // Render  Canvas -> Teddy Bear String  ==========
     function TeddyBearString(event) {
         let canvasTeddyBearString = document.getElementById("teddy-bear-string");
         let teddyBear = document.querySelector('.teddy-bear');
-        let widthCanvasTeddyBearString = event.currentTarget.innerWidth;
-        console.log(widthCanvasTeddyBearString)
 
         canvasTeddyBearString.style.height = teddyBear.height + "px";
-        canvasTeddyBearString.style.marginBottom = "-" + teddyBear.height + "px"
+        canvasTeddyBearString.style.marginBottom = "-" + teddyBear.height + "px";
 
         if (event.currentTarget.innerWidth <= 1920) {
             canvasTeddyBearString.style.width = event.currentTarget.innerWidth + "px";
         } else {
             canvasTeddyBearString.style.width = 1920 + "px";
         }
-
 
         let ctxString = canvasTeddyBearString.getContext("2d");
         ctxString.beginPath();
@@ -48,10 +42,9 @@ window.onload = function (event) {
         ctxString.shadowColor = "#2d73a4";
         ctxString.shadowOffsetY = 10;
         ctxString.shadowBlur = 5;
+        ctxString.imageSmoothingEnabled = true;
         ctxString.stroke();
-
-
-        // window resize -> resize canvas
+        // window resize -> resize canvas  ========
         window.onresize = function (event) {
             canvasTeddyBearString.style.height = teddyBear.height + "px";
             canvasTeddyBearString.style.marginBottom = "-" + teddyBear.height + "px";
@@ -66,5 +59,5 @@ window.onload = function (event) {
 
     };
     TeddyBearString(event);
+    
 }
-
