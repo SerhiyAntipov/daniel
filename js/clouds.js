@@ -14,8 +14,8 @@ window.onload = function (event) {
         ctxCloud.bezierCurveTo(0, 170, 0, 70, 50, 70);
         ctxCloud.fillStyle = "white";
         ctxCloud.shadowBlur = 10;
-        ctxCloud.shadowOffsetX = 5;
-        ctxCloud.shadowOffsetY = 5;
+        ctxCloud.shadowOffsetX = 10;
+        ctxCloud.shadowOffsetY = 10;
         ctxCloud.shadowColor = "#2d73a4";
         ctxCloud.fill();
     }());
@@ -44,6 +44,10 @@ window.onload = function (event) {
         ctxString.moveTo(0, 0);
         ctxString.quadraticCurveTo(1920 - 1920 / 5, 120, 1920, 0);
         ctxString.strokeStyle = "#007db1";
+        ctxString.lineWidth = 3;
+        ctxString.shadowColor = "#2d73a4";
+        ctxString.shadowOffsetY = 10;
+        ctxString.shadowBlur = 5;
         ctxString.stroke();
 
 
