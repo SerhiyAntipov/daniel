@@ -45,8 +45,8 @@ html {
 }
 
 .container {
-    max-width: 80%;
     margin   : 0 auto;
+    padding: 10px;
 }
 
 .title {
@@ -55,7 +55,6 @@ html {
     font-family   : "DancingScript";
     font-size     : 15rem;
     transform     : rotateZ(-10deg);
-    margin-left   : -10%;
     position      : relative;
     z-index       : 15;
     display       : inline-block;
@@ -83,7 +82,8 @@ html {
 }
 
 h2.main-text {
-    font-size: 18rem;
+    font-size: 10rem;
+    opacity: 0.5;
 }
 
 .bg-wood {
@@ -165,7 +165,7 @@ h2.main-text {
     }
 
     h2.main-text {
-        font-size: 12rem;
+        font-size: 8rem;
     }
 }
 
@@ -237,7 +237,7 @@ h2.main-text {
 
 /* star ========================== */
 
-.d14 {
+.star {
     margin       : 50px 0;
     height       : 0;
     width        : 0;
@@ -250,15 +250,15 @@ h2.main-text {
     display      : inline-block;
 }
 
-.d14:before,
-.d14:after {
+.star:before,
+.star:after {
     content : "";
     height  : 0;
     width   : 0;
     position: absolute;
 }
 
-.d14:before {
+.star:before {
     top          : -26px;
     left         : -32px;
     border-bottom: 40px solid var(--color-lite--blue);
@@ -267,7 +267,7 @@ h2.main-text {
     transform    : rotate(-35deg);
 }
 
-.d14:after {
+.star:after {
     top          : 2px;
     left         : -53px;
     border-right : 50px solid transparent;
@@ -276,60 +276,66 @@ h2.main-text {
     transform    : rotate(-70deg);
 }
 
-/* wagon ==================== */
+/* train ==================== */
 
-.wagon.locomotive{
-    width                     : 300px;
-    height                    : 150px;
-    position                  : relative;
-    background-size: 14.4px 3px;
-    background-repeat: repeat-x;
-    background-position: 0 20px, 0 100px;
-    background-color: var(--color-wagon-blue-2);
-    background-image: linear-gradient(90deg, transparent 5px, white 5px), linear-gradient(90deg, transparent 5px, white 5px);
-    /* border-bottom-left-radius : 0 0;
-    border-bottom-right-radius: 0 0; */
-    border-radius: 0;
+.train .container{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
 }
 
+.wagon.locomotive {
+    width                        : 300px;
+    /* height                    : 120px; */
+    position                     : relative;
+    background-size              : 14.4px 3px;
+    background-repeat            : repeat-x;
+    background-position          : 0 20px, 0 100px;
+    background-color             : var(--color-wagon-blue-2);
+    background-image             : linear-gradient(90deg, transparent 5px, white 5px), linear-gradient(90deg, transparent 5px, white 5px);
+    /* border-bottom-left-radius : 0 0;
+    border-bottom-right-radius   : 0 0; */
+    border-radius                : 0;
+}
+
+.wagon-wrapper{
+    padding: 10px;
+    padding-top: 200px;
+    border: 1px solid;
+}
 
 .wagon {
-    width                     : 300px;
-    height                    : 150px;
+    display: inline-block;
+    width                     : 240px;
+    height                    : 110px;
     position                  : relative;
     border-top                : solid 30px var(--color-wagon-blue-1);
     border-bottom-left-radius : 20px 200px;
     border-bottom-right-radius: 20px 200px;
-    margin-left               : 20px;
-    margin-bottom: 57px;
+    margin-bottom             : 57px;
+}
+
+.wagon::before,
+.wagon::after {
+    content         : '';
+    width           : 36px;
+    height          : 36px;
+    display         : block;
+    border-radius   : 50%;
+    background-color: var(--color-wagon-grey-2);
+    border          : 14px solid var(--color-wagon-grey-1);
+    position        : absolute;
+    background-image: radial-gradient(circle, white 6px, transparent 6px);
+    bottom: -43px;
 }
 
 .wagon::before {
-    content         : '';
-    width           : 50px;
-    height          : 50px;
-    display         : block;
-    border-radius   : 50%;
-    background-color: var(--color-wagon-grey-2);
-    border          : 20px solid var(--color-wagon-grey-1);
-    position        : absolute;
-    left            : 20px;
-    bottom          : -43px;
-    background-image: radial-gradient(circle, white 8px, transparent 8px)
+    left  : 20px;
 }
 
+
 .wagon::after {
-    content         : '';
-    width           : 50px;
-    height          : 50px;
-    display         : block;
-    border-radius   : 50%;
-    background-color: var(--color-wagon-grey-2);
-    border          : 20px solid var(--color-wagon-grey-1);
-    position        : absolute;
-    right           : 20px;
-    bottom          : -43px;
-    background-image: radial-gradient(circle, white 8px, transparent 8px)
+    right : 20px;
 }
 
 .wagon.wagon-03 {
@@ -348,51 +354,54 @@ h2.main-text {
     background-image   : radial-gradient(circle, white 8px, transparent 8px), radial-gradient(circle, white 8px, transparent 8px);
 }
 
-.wagon::after{
-    animation-name: move1;
-    animation-duration: 2s;
+.wagon::after {
+    animation-name           : move1;
+    animation-duration       : 2s;
     animation-iteration-count: infinite;
 }
 
-.wagon::before{
-    animation-name: move2;
-    animation-duration: 2s;
+.wagon::before {
+    animation-name           : move2;
+    animation-duration       : 2s;
     animation-iteration-count: infinite;
 }
 
-.wagon{
-    animation-name: rotate;
-    animation-duration: 3s;
+.wagon {
+    animation-name           : rotate;
+    animation-duration       : 3s;
     animation-iteration-count: infinite;
 }
 
-@keyframes move1{
+@keyframes move1 {
     50% {
         margin-bottom: 10px;
-        margin-right: 5px;
+        margin-right : 5px;
     }
-    100%{
+
+    100% {
         margin-bottom: 0;
-        margin-right: 0;
+        margin-right : 0;
     }
 }
 
-@keyframes move2{
+@keyframes move2 {
     25% {
         margin-bottom: 10px;
-        margin-right: 5px;
+        margin-right : 5px;
     }
-    75%{
+
+    75% {
         margin-bottom: 0;
-        margin-right: 0;
+        margin-right : 0;
     }
 }
 
-@keyframes rotate{
+@keyframes rotate {
     25% {
         transform: rotate(1deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-1deg);
     }
 }
