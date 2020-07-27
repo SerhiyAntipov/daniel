@@ -336,7 +336,7 @@ h2.main-text {
 
 /* slider ====================== */
 .slider {
-    max-width: 70%;
+    max-width: 80%;
     margin   : 70px auto;
 }
 
@@ -602,6 +602,9 @@ h2.main-text {
 }
 
 @media only screen and (max-width: 800px) {
+    .slider {
+        max-width: 80%;
+    }
     .teddy-bear {
         width: 160px;
     }
@@ -697,7 +700,7 @@ h2.main-text {
         content: "";
         width  : 25%;
         height : 50%;
-        left: 6px;
+        left   : 6px;
     }
 
     .locomotive-cabine::after {
@@ -727,12 +730,13 @@ h2.main-text {
     .wagon.locomotive::after {
         border: 8px solid var(--color-wagon-grey-1);
     }
+
     .wagon::after {
         animation-name           : move-460;
         animation-duration       : 2s;
         animation-iteration-count: infinite;
     }
-    
+
     .wagon::before,
     .locomotive-wrapper::after {
         animation-name           : move-460;
@@ -743,8 +747,20 @@ h2.main-text {
 
 }
 
-@media only screen and (max-width: 460px) {
 
+@media only screen and (max-width: 640px) {   
+    .slider {
+        max-width: 75%;
+    }
+    .slick-slide img {
+        max-height: 320px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .slider {
+        max-width: 68%;
+    }
     html {
         font-size: 10px;
     }
@@ -803,5 +819,8 @@ h2.main-text {
 @media only screen and (max-width: 320px) {
     #cloud {
         left: -7%;
+    }
+    .slider {
+        max-width: 65%;
     }
 }
