@@ -37,7 +37,7 @@ window.onload = function (event) {
         ctxString.beginPath();
         ctxString.moveTo(0, 0);
         ctxString.quadraticCurveTo(1920 - 1920 / 5, 120, 1920, 0);
-        ctxString.strokeStyle = "#007db1";
+        ctxString.strokeStyle = "#0d5cab";
         ctxString.lineWidth = 3;
         ctxString.shadowColor = "#2d73a4";
         ctxString.shadowOffsetY = 10;

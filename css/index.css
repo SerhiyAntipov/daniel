@@ -28,7 +28,7 @@ html {
 .congratulation {
     position        : relative;
     /* padding-top  : 5px; */
-    /* margin-top   : -250px; */
+    margin-top      : 100px;
 }
 
 .teddy-bear {
@@ -37,7 +37,7 @@ html {
     display : block;
     position: absolute;
     right   : 10%;
-    top     : 18%;
+    top     : 49px;
 }
 
 .congratulation .container {
@@ -53,7 +53,7 @@ html {
     color         : var(--color-blue);
     text-transform: lowercase;
     font-family   : "DancingScript";
-    font-size     : 15rem;
+    font-size     : 12rem;
     transform     : rotateZ(-10deg);
     position      : relative;
     z-index       : 15;
@@ -63,7 +63,7 @@ html {
 .sub-title {
     color         : var(--color-dark-blue);
     text-transform: uppercase;
-    font-size     : 4rem;
+    font-size     : 5rem;
     font-weight   : bold;
     text-align    : center;
     position      : relative;
@@ -479,7 +479,7 @@ h2.main-text {
 @media only screen and (max-width: 1600px) {
     .teddy-bear {
         right: 0;
-        top  : 15%;
+        top  : 20px;
     }
 }
 
@@ -490,7 +490,7 @@ h2.main-text {
 
     .teddy-bear {
         width: 320px;
-        top  : 10%;
+        top  : -20px;
     }
 
     /* _____________________________ */
@@ -594,6 +594,7 @@ h2.main-text {
 
     .teddy-bear {
         width: 240px;
+        top  : -40px;
     }
 
     .main-text {
@@ -605,8 +606,10 @@ h2.main-text {
     .slider {
         max-width: 80%;
     }
+
     .teddy-bear {
         width: 160px;
+        top  : -60px;
     }
 
     #cloud {
@@ -620,15 +623,15 @@ h2.main-text {
     }
 
     .sub-title {
-        font-size: 2rem;
+        font-size: 5rem;
     }
 
     .main-text {
-        font-size: 8rem;
+        font-size: 12rem;
     }
 
     h2.main-text {
-        font-size: 8rem;
+        font-size: 10rem;
     }
 
     .slick-slide img {
@@ -748,12 +751,39 @@ h2.main-text {
 }
 
 
-@media only screen and (max-width: 640px) {   
+@media only screen and (max-width: 640px) {
     .slider {
         max-width: 75%;
     }
+
     .slick-slide img {
-        max-height: 320px;
+        max-height: 360px;
+    }
+
+    .sub-title {
+        font-size: 3rem;
+    }
+
+    .main-text {
+        font-size: 9rem;
+    }
+
+    h2.main-text {
+        font-size: 7rem;
+    }
+
+    .title {
+        font-size: 9rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .wagon-wrapper-03 {
+        display: none;
+    }
+
+    .main-footer p {
+        font-size: 2rem;
     }
 }
 
@@ -761,6 +791,7 @@ h2.main-text {
     .slider {
         max-width: 68%;
     }
+
     html {
         font-size: 10px;
     }
@@ -775,6 +806,9 @@ h2.main-text {
         top      : 0;
     }
 
+    .wagon-wrapper-02 {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -785,7 +819,7 @@ h2.main-text {
 
     .teddy-bear {
         width: 90px;
-        top  : 6%;
+        top  : -80px;
     }
 
     #cloud {
@@ -794,6 +828,14 @@ h2.main-text {
 
     .slider .slick-dots {
         visibility: hidden;
+    }
+
+    .main-text {
+        font-size: 9rem;
+    }
+
+    h2.main-text {
+        font-size: 7rem;
     }
 }
 
@@ -805,22 +847,37 @@ h2.main-text {
     }
 
     .teddy-bear {
-        top: 10%;
+        top: -75px;
     }
 
     #cloud {
-        top      : -29px;
-        left     : 0;
+        top      : -23px;
+        left     : 32px;
         transform: scale(.5);
+    }
+
+    .title {
+        font-size: 9rem;
+    }
+
+    .main-footer p {
+        font-size: 3rem;
     }
 }
 
 
 @media only screen and (max-width: 320px) {
     #cloud {
-        left: -7%;
+        top : -18px;
+        left: 12px;
     }
+
     .slider {
         max-width: 65%;
     }
+
+    .title {
+        font-size: 10rem;
+    }
+
 }
