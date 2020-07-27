@@ -128,12 +128,12 @@ h2.main-text {
 }
 
 .wagon-wrapper-02 {
-    padding-top: 400px;
+    padding-top: 305px;
 }
 
 .wagon-wrapper-03,
 .wagon-wrapper-01 {
-    padding-top: 290px;
+    padding-top: 220px;
 }
 
 
@@ -323,18 +323,21 @@ h2.main-text {
 
 .wagon-wrapper {
     background-repeat        : no-repeat;
-    background-position      : bottom;
-    background-position      : bottom 180px center;
+    background-position      : bottom 85px center;
     background-size          : contain;
     animation-duration       : 1.5s;
     animation-name           : rotate;
     animation-iteration-count: infinite;
 }
 
+.wagon-wrapper-03 {
+    background-position: bottom 115px center;
+}
+
 /* slider ====================== */
 .slider {
     max-width: 70%;
-    margin   : 70px auto 110px;
+    margin   : 70px auto;
 }
 
 .slick-slide img {
@@ -421,6 +424,18 @@ h2.main-text {
     }
 }
 
+@keyframes move-460 {
+    50% {
+        margin-bottom: 4px;
+        margin-right : 2px;
+    }
+
+    100% {
+        margin-bottom: 0;
+        margin-right : 0;
+    }
+}
+
 @keyframes rotate {
     25% {
         transform: rotate(1deg);
@@ -493,16 +508,20 @@ h2.main-text {
 
     .wagon-wrapper {
         padding            : 5px;
-        background-position: bottom 120px center;
+        background-position: bottom 60px center;
     }
 
     .wagon-wrapper-02 {
-        padding-top: 265px;
+        padding-top: 200px;
     }
 
     .wagon-wrapper-01,
     .wagon-wrapper-03 {
-        padding-top: 190px;
+        padding-top: 150px;
+    }
+
+    .wagon-wrapper-03 {
+        background-position: bottom 85px center;
     }
 
     .wagon::before,
@@ -612,9 +631,119 @@ h2.main-text {
     .slick-slide img {
         max-height: 400px;
     }
+
+    .wagon {
+        width        : 120px;
+        height       : 50px;
+        border-top   : solid 15px var(--color-wagon-blue-1);
+        margin-bottom: 25px;
+    }
+
+    .wagon.locomotive {
+        width: 160px;
+    }
+
+    .wagon-wrapper {
+        padding            : 5px;
+        background-position: bottom 35px center;
+    }
+
+    .wagon-wrapper-02 {
+        padding-top: 155px;
+    }
+
+    .wagon-wrapper-01,
+    .wagon-wrapper-03 {
+        padding-top: 115px;
+    }
+
+    .wagon-wrapper-03 {
+        background-position: bottom 60px center;
+    }
+
+    .wagon::before,
+    .wagon::after {
+        width : 20px;
+        height: 20px;
+        bottom: -20px;
+    }
+
+    .wagon.locomotive::after {
+        width : 40px;
+        height: 40px;
+    }
+
+    .locomotive-wrapper::after {
+        width : 20px;
+        height: 20px;
+        bottom: 12px;
+        left  : 55px;
+    }
+
+    .wagon::after {
+        right: 10px;
+    }
+
+    .wagon::before {
+        left: 10px;
+    }
+
+    .locomotive-cabine {
+        height    : 50px;
+        border-top: solid 15px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-cabine::before {
+        content: "";
+        width  : 25%;
+        height : 50%;
+        left: 6px;
+    }
+
+    .locomotive-cabine::after {
+        content: "";
+        width  : 20%;
+        height : 40%;
+    }
+
+    .locomotive-chimney {
+        width     : 30px;
+        height    : 30px;
+        border-top: solid 20px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-chimney::before,
+    .locomotive-chimney::after {
+        width : 35px;
+        height: 35px;
+    }
+
+    .wagon::before,
+    .wagon::after,
+    .locomotive-wrapper::after {
+        border: 7px solid var(--color-wagon-grey-1);
+    }
+
+    .wagon.locomotive::after {
+        border: 8px solid var(--color-wagon-grey-1);
+    }
+    .wagon::after {
+        animation-name           : move-460;
+        animation-duration       : 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    .wagon::before,
+    .locomotive-wrapper::after {
+        animation-name           : move-460;
+        animation-duration       : 2s;
+        animation-iteration-count: infinite;
+        animation-delay          : .5s;
+    }
+
 }
 
-@media only screen and (max-width: 460px || max-height: 360px) {
+@media only screen and (max-width: 460px) {
 
     html {
         font-size: 10px;
