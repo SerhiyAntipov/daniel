@@ -45,7 +45,7 @@ html {
 }
 
 .container {
-    margin   : 0 auto;
+    margin : 0 auto;
     padding: 10px;
 }
 
@@ -83,7 +83,7 @@ html {
 
 h2.main-text {
     font-size: 10rem;
-    opacity: 0.5;
+    opacity  : 0.5;
 }
 
 .bg-wood {
@@ -107,6 +107,360 @@ h2.main-text {
     transform: scale(1.5);
 }
 
+/* ============================== */
+
+#bulbe {
+    position: fixed;
+    top     : 0;
+}
+
+/* train ==================== */
+
+.train .container {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    align-items    : flex-end;
+}
+
+.wagon-wrapper {
+    padding: 10px;
+}
+
+.wagon-wrapper-02 {
+    padding-top: 400px;
+}
+
+.wagon-wrapper-03,
+.wagon-wrapper-01 {
+    padding-top: 290px;
+}
+
+
+.locomotive-chimney::before,
+.locomotive-chimney::after {
+    content                  : "";
+    width                    : 45px;
+    height                   : 45px;
+    display                  : block;
+    position                 : absolute;
+    top                      : -30px;
+    left                     : 0;
+    background               : url(../images/star.png) no-repeat;
+    background-size          : contain;
+    z-index                  : -1;
+    animation-timing-function: linear;
+    animation-duration       : 3s;
+    animation-name           : star-move;
+    animation-iteration-count: infinite;
+}
+
+.locomotive-chimney::after {
+    animation-delay: 1.5s;
+}
+
+.locomotive-wrapper {
+    text-align: right;
+}
+
+.wagon.locomotive {
+    /* width                        : 300px; */
+    width                    : 360px;
+    position                 : relative;
+    background-size          : 14.4px 3px;
+    background-repeat        : repeat-x;
+    background-position      : 0 20px, 0 75px;
+    background-color         : var(--color-wagon-blue-2);
+    background-image         : linear-gradient(90deg, transparent 5px, white 5px), linear-gradient(90deg, transparent 5px, white 5px);
+    border-top-left-radius   : 100px 150px;
+    border-bottom-left-radius: 30px 90px;
+}
+
+.locomotive-cabine {
+    width   : 47%;
+    height  : 105px;
+    position: relative;
+    ;
+    display         : inline-block;
+    background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
+    border-top      : solid 30px var(--color-wagon-blue-1);
+    position        : relative;
+}
+
+.locomotive-chimney {
+    width           : 45px;
+    height          : 50px;
+    display         : inline-block;
+    background-image: linear-gradient(var(--color-wagon-blue-2) 0 33%, var(--color-wagon-blue-3) 33% 66%, var(--color-wagon-blue-4) 66% 100%);
+    border-top      : solid 30px var(--color-wagon-blue-1);
+    margin-right    : 10%;
+    position        : relative;
+}
+
+.locomotive-cabine::before {
+    content         : "";
+    width           : 35%;
+    height          : 65%;
+    display         : block;
+    background-color: white;
+    border-radius   : 40%;
+    border          : solid 4px var(--color-wagon-blue-1);
+    position        : absolute;
+    left            : 15px;
+    top             : 10px;
+}
+
+.locomotive-cabine::after {
+    content         : "";
+    width           : 25%;
+    height          : 55%;
+    display         : block;
+    background-color: white;
+    border-radius   : 40%;
+    border          : solid 4px var(--color-wagon-blue-1);
+    position        : absolute;
+    right           : 15px;
+    top             : 10px;
+}
+
+.wagon {
+    display                   : inline-block;
+    width                     : 240px;
+    height                    : 110px;
+    position                  : relative;
+    border-top                : solid 30px var(--color-wagon-blue-1);
+    border-bottom-left-radius : 20px 200px;
+    border-bottom-right-radius: 20px 200px;
+    margin-bottom             : 45px;
+}
+
+.wagon::before,
+.wagon::after,
+.locomotive-wrapper::after {
+    content         : '';
+    width           : 36px;
+    height          : 36px;
+    display         : block;
+    border-radius   : 50%;
+    background-color: var(--color-wagon-grey-2);
+    border          : 14px solid var(--color-wagon-grey-1);
+    position        : absolute;
+    background-image: radial-gradient(circle, white 6px, transparent 6px);
+    bottom          : -43px;
+}
+
+.locomotive-wrapper::after {
+    bottom: 14px;
+    left  : 110px;
+}
+
+.wagon.locomotive::after {
+    width           : 80px;
+    height          : 80px;
+    border          : 20px solid var(--color-wagon-grey-1);
+    background-image: radial-gradient(circle, white 10px, transparent 10px);
+}
+
+.wagon.locomotive::after::after {
+    content   : '';
+    width     : 100px;
+    height    : 100px;
+    background: black;
+}
+
+.wagon::before {
+    left: 20px;
+}
+
+.wagon::after {
+    right: 20px;
+}
+
+.wagon.wagon-03 {
+    background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
+}
+
+.wagon.wagon-02 {
+    background-color: var(--color-wagon-blue-2);
+}
+
+.wagon.wagon-01 {
+    background-size    : 50px 50px;
+    background-repeat  : repeat;
+    background-position: 25px 25px, 0px 0px;
+    background-color   : var(--color-wagon-blue-2);
+    background-image   : radial-gradient(circle, white 8px, transparent 8px), radial-gradient(circle, white 8px, transparent 8px);
+}
+
+.wagon::after {
+    animation-name           : move;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+}
+
+.wagon::before,
+.locomotive-wrapper::after {
+    animation-name           : move;
+    animation-duration       : 2s;
+    animation-iteration-count: infinite;
+    animation-delay          : .5s;
+}
+
+.wagon-wrapper-02 {
+    background     : url(../images/animals-giraffe_260.png);
+    animation-delay: 0s;
+}
+
+.wagon-wrapper-01 {
+    background     : url(../images/animals-elephant_260.png);
+    animation-delay: .5s;
+}
+
+.wagon-wrapper-03 {
+    background     : url(../images/animals-rabbit_260.png);
+    animation-delay: 1s;
+}
+
+.wagon-wrapper {
+    background-repeat        : no-repeat;
+    background-position      : bottom;
+    background-position      : bottom 180px center;
+    background-size          : contain;
+    animation-duration       : 1.5s;
+    animation-name           : rotate;
+    animation-iteration-count: infinite;
+}
+
+/* slider ====================== */
+.slider {
+    max-width: 70%;
+    margin   : 70px auto 110px;
+}
+
+.slick-slide img {
+    display   : block;
+    padding   : 20px;
+    max-height: 600px;
+}
+
+.slick-prev {
+    left: -60px;
+}
+
+.slick-next {
+    right: -60px;
+}
+
+.slick-prev,
+.slick-next {
+    width : 60px;
+    height: 60px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 60px;
+    color    : var(--color-wagon-blue-1);
+}
+
+
+.slick-dots li.slick-active button:before {
+    color: var(--color-wagon-blue-1);
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 80px;
+}
+
+.slick-dots {
+    bottom: inherit;
+}
+
+.slick-dots li {
+    width : 30px;
+    height: 30px;
+    margin: 3px;
+}
+
+.slick-dots li button {
+    width : 30px;
+    height: 30px;
+}
+
+
+.slick-dots li button:before {
+    font-size  : 30px;
+    width      : 30px;
+    height     : 30px;
+    line-height: 30px;
+}
+
+
+/* footer  */
+.main-footer {
+    min-height      : 200px;
+    background-color: var(--color-wagon-blue-2);
+}
+
+.main-footer p {
+    font-size : 1.5rem;
+    color     : white;
+    text-align: center;
+    padding   : 10px;
+}
+
+@keyframes move {
+    50% {
+        margin-bottom: 10px;
+        margin-right : 5px;
+    }
+
+    100% {
+        margin-bottom: 0;
+        margin-right : 0;
+    }
+}
+
+@keyframes rotate {
+    25% {
+        transform: rotate(1deg);
+    }
+
+    75% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes star-move {
+    0 {
+        top : -30px;
+        left: 0;
+    }
+
+    25% {
+        top : -90px;
+        left: 10px;
+    }
+
+    50% {
+        top : -120px;
+        left: 30px;
+    }
+
+    75% {
+        opacity: 1;
+        top    : -140px;
+        left   : 70px;
+    }
+
+    100% {
+        opacity  : 0;
+        top      : -150px;
+        left     : 120px;
+        transform: rotate(180deg)
+    }
+}
+
 @media only screen and (max-width: 1600px) {
     .teddy-bear {
         right: 0;
@@ -123,6 +477,89 @@ h2.main-text {
         width: 320px;
         top  : 10%;
     }
+
+    /* _____________________________ */
+
+    .wagon {
+        width        : 160px;
+        height       : 70px;
+        border-top   : solid 20px var(--color-wagon-blue-1);
+        margin-bottom: 35px;
+    }
+
+    .wagon.locomotive {
+        width: 220px;
+    }
+
+    .wagon-wrapper {
+        padding            : 5px;
+        background-position: bottom 120px center;
+    }
+
+    .wagon-wrapper-02 {
+        padding-top: 265px;
+    }
+
+    .wagon-wrapper-01,
+    .wagon-wrapper-03 {
+        padding-top: 190px;
+    }
+
+    .wagon::before,
+    .wagon::after {
+        width : 20px;
+        height: 20px;
+        bottom: -30px;
+    }
+
+    .wagon.locomotive::after {
+        width : 40px;
+        height: 40px;
+    }
+
+    .locomotive-wrapper::after {
+        width : 20px;
+        height: 20px;
+        bottom: 12px;
+        left  : 67px;
+    }
+
+    .wagon::after {
+        right: 10px;
+    }
+
+    .wagon::before {
+        left: 10px;
+    }
+
+    .locomotive-cabine {
+        height    : 70px;
+        border-top: solid 20px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-cabine::before {
+        content: "";
+        width  : 25%;
+        height : 60%;
+    }
+
+    .locomotive-cabine::after {
+        content: "";
+        width  : 20%;
+        height : 40%;
+    }
+
+    .locomotive-chimney {
+        width     : 30px;
+        height    : 30px;
+        border-top: solid 20px var(--color-wagon-blue-1);
+    }
+
+    .locomotive-chimney::before,
+    .locomotive-chimney::after {
+        width : 35px;
+        height: 35px;
+    }
 }
 
 
@@ -138,6 +575,10 @@ h2.main-text {
 
     .teddy-bear {
         width: 240px;
+    }
+
+    .main-text {
+        font-size: 15rem;
     }
 }
 
@@ -161,15 +602,19 @@ h2.main-text {
     }
 
     .main-text {
-        font-size: 10rem;
+        font-size: 8rem;
     }
 
     h2.main-text {
         font-size: 8rem;
     }
+
+    .slick-slide img {
+        max-height: 400px;
+    }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 460px || max-height: 360px) {
 
     html {
         font-size: 10px;
@@ -184,6 +629,7 @@ h2.main-text {
         left     : -2%;
         top      : 0;
     }
+
 }
 
 @media only screen and (max-width: 420px) {
@@ -199,6 +645,10 @@ h2.main-text {
 
     #cloud {
         top: -16px;
+    }
+
+    .slider .slick-dots {
+        visibility: hidden;
     }
 }
 
@@ -224,184 +674,5 @@ h2.main-text {
 @media only screen and (max-width: 320px) {
     #cloud {
         left: -7%;
-    }
-}
-
-
-/* ============================== */
-
-#bulbe {
-    position: fixed;
-    top     : 0;
-}
-
-/* star ========================== */
-
-.star {
-    margin       : 50px 0;
-    height       : 0;
-    width        : 0;
-    position     : relative;
-    border-right : 50px solid transparent;
-    border-bottom: 35px solid var(--color-lite--blue);
-    border-left  : 50px solid transparent;
-    transform    : rotate(35deg) scale(1.5);
-    opacity      : .8;
-    display      : inline-block;
-}
-
-.star:before,
-.star:after {
-    content : "";
-    height  : 0;
-    width   : 0;
-    position: absolute;
-}
-
-.star:before {
-    top          : -26px;
-    left         : -32px;
-    border-bottom: 40px solid var(--color-lite--blue);
-    border-left  : 15px solid transparent;
-    border-right : 15px solid transparent;
-    transform    : rotate(-35deg);
-}
-
-.star:after {
-    top          : 2px;
-    left         : -53px;
-    border-right : 50px solid transparent;
-    border-bottom: 35px solid var(--color-lite--blue);
-    border-left  : 50px solid transparent;
-    transform    : rotate(-70deg);
-}
-
-/* train ==================== */
-
-.train .container{
-    display: flex;
-    flex-wrap: wrap;
-   justify-content: center;
-}
-
-.wagon.locomotive {
-    width                        : 300px;
-    /* height                    : 120px; */
-    position                     : relative;
-    background-size              : 14.4px 3px;
-    background-repeat            : repeat-x;
-    background-position          : 0 20px, 0 100px;
-    background-color             : var(--color-wagon-blue-2);
-    background-image             : linear-gradient(90deg, transparent 5px, white 5px), linear-gradient(90deg, transparent 5px, white 5px);
-    /* border-bottom-left-radius : 0 0;
-    border-bottom-right-radius   : 0 0; */
-    border-radius                : 0;
-}
-
-.wagon-wrapper{
-    padding: 10px;
-    padding-top: 200px;
-    border: 1px solid;
-}
-
-.wagon {
-    display: inline-block;
-    width                     : 240px;
-    height                    : 110px;
-    position                  : relative;
-    border-top                : solid 30px var(--color-wagon-blue-1);
-    border-bottom-left-radius : 20px 200px;
-    border-bottom-right-radius: 20px 200px;
-    margin-bottom             : 57px;
-}
-
-.wagon::before,
-.wagon::after {
-    content         : '';
-    width           : 36px;
-    height          : 36px;
-    display         : block;
-    border-radius   : 50%;
-    background-color: var(--color-wagon-grey-2);
-    border          : 14px solid var(--color-wagon-grey-1);
-    position        : absolute;
-    background-image: radial-gradient(circle, white 6px, transparent 6px);
-    bottom: -43px;
-}
-
-.wagon::before {
-    left  : 20px;
-}
-
-
-.wagon::after {
-    right : 20px;
-}
-
-.wagon.wagon-03 {
-    background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
-}
-
-.wagon.wagon-02 {
-    background-color: var(--color-wagon-blue-2);
-}
-
-.wagon.wagon-01 {
-    background-size    : 50px 50px;
-    background-repeat  : repeat;
-    background-position: 25px 25px, 0px 0px;
-    background-color   : var(--color-wagon-blue-2);
-    background-image   : radial-gradient(circle, white 8px, transparent 8px), radial-gradient(circle, white 8px, transparent 8px);
-}
-
-.wagon::after {
-    animation-name           : move1;
-    animation-duration       : 2s;
-    animation-iteration-count: infinite;
-}
-
-.wagon::before {
-    animation-name           : move2;
-    animation-duration       : 2s;
-    animation-iteration-count: infinite;
-}
-
-.wagon {
-    animation-name           : rotate;
-    animation-duration       : 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes move1 {
-    50% {
-        margin-bottom: 10px;
-        margin-right : 5px;
-    }
-
-    100% {
-        margin-bottom: 0;
-        margin-right : 0;
-    }
-}
-
-@keyframes move2 {
-    25% {
-        margin-bottom: 10px;
-        margin-right : 5px;
-    }
-
-    75% {
-        margin-bottom: 0;
-        margin-right : 0;
-    }
-}
-
-@keyframes rotate {
-    25% {
-        transform: rotate(1deg);
-    }
-
-    75% {
-        transform: rotate(-1deg);
     }
 }
