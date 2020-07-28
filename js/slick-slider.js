@@ -6,5 +6,6 @@ $('.slick-slider').slick({
     centerMode: true,
     variableWidth: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    pauseOnHover: false
 });
