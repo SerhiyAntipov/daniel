@@ -98,7 +98,6 @@ h2.main-text {
 }
 
 .bg-wood {
-    min-height: 100vh;
     background: url(../images/bg_blue-wood.jpg);
 }
 
@@ -424,8 +423,17 @@ h2.main-text {
     color     : white;
     text-align: center;
     padding   : 10px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width : 1200px;
+    margin    : 0 auto;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
 }
 
 @keyframes move {
