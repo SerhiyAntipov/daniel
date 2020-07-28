@@ -6,6 +6,7 @@
     font-family: "DancingScript";
     src        : url("../fonts/DancingScript-VariableFontwght.woff2");
 }
+
 @font-face {
     font-family: "Ranchers-Regular";
     src        : url("../fonts/Ranchers-Regular.woff2");
@@ -13,7 +14,6 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
-    /* font-family: "Ranchers-Regular"; */
     font-size  : 16px;
     margin     : 0;
     padding    : 0;
@@ -31,9 +31,8 @@ html {
 }
 
 .congratulation {
-    position        : relative;
-    /* padding-top  : 5px; */
-    margin-top      : 30px;
+    position  : relative;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -44,7 +43,6 @@ html {
     position: absolute;
     right   : 0;
     top     : 70px;
-    /* z-index: 1; */
 }
 
 .congratulation .container {
@@ -66,7 +64,7 @@ html {
     z-index       : 15;
     display       : inline-block;
     line-height   : 1.4;
-    font-weight: bold;
+    font-weight   : bold;
 }
 
 .sub-title {
@@ -74,11 +72,9 @@ html {
     text-transform: uppercase;
     font-size     : 5rem;
     font-weight   : bold;
-    /* text-align    : left;
-    margin-left   : 16%; */
     position      : relative;
     z-index       : 15;
-    font-family: "Ranchers-Regular";
+    font-family   : "Ranchers-Regular";
     letter-spacing: 5px;
 }
 
@@ -91,13 +87,13 @@ html {
     line-height   : 1;
     filter        : contrast(3) brightness(0.5);
     z-index       : 9;
-    font-family: "Ranchers-Regular";
+    font-family   : "Ranchers-Regular";
     letter-spacing: 20px;
 }
 
 h2.main-text {
-    font-size: 6rem;
-    opacity  : 0.5;
+    font-size     : 6rem;
+    opacity       : 0.5;
     letter-spacing: 5px;
 }
 
@@ -106,7 +102,6 @@ h2.main-text {
     background: url(../images/bg_blue-wood.jpg);
 }
 
-
 .cloud {
     width   : 300px;
     height  : 200px;
@@ -114,15 +109,11 @@ h2.main-text {
     opacity : .9;
 }
 
-
 #cloud {
     left     : 18%;
     top      : 0;
-    /* z-index  : 5; */
     transform: scale(1.5);
 }
-
-/* ============================== */
 
 #bulbe {
     position: fixed;
@@ -131,14 +122,13 @@ h2.main-text {
 
 /* train ==================== */
 
-.train .container{
-    text-align: center;
-    color: var(--color-wagon-blue-1);
-    /* font-weight: bold; */
+.train .container {
+    text-align    : center;
+    color         : var(--color-wagon-blue-1);
     text-transform: uppercase;
-    font-size: 3rem;
-    font-family: "Ranchers-Regular";
-    font-weight: lighter;
+    font-size     : 3rem;
+    font-family   : "Ranchers-Regular";
+    font-weight   : lighter;
     padding-bottom: 50px;
 }
 
@@ -149,9 +139,10 @@ h2.main-text {
     align-items    : flex-end;
 }
 
-.locomotive-head{
+.locomotive-head {
     margin-bottom: -8px;
 }
+
 .wagon-wrapper {
     padding: 10px;
 }
@@ -164,7 +155,6 @@ h2.main-text {
 .wagon-wrapper-01 {
     padding-top: 220px;
 }
-
 
 .locomotive-chimney::before,
 .locomotive-chimney::after {
@@ -193,7 +183,6 @@ h2.main-text {
 }
 
 .wagon.locomotive {
-    /* width                        : 300px; */
     width                    : 360px;
     position                 : relative;
     background-size          : 14.4px 3px;
@@ -206,10 +195,9 @@ h2.main-text {
 }
 
 .locomotive-cabine {
-    width   : 47%;
-    height  : 105px;
-    position: relative;
-    ;
+    width           : 47%;
+    height          : 105px;
+    position        : relative;
     display         : inline-block;
     background-image: repeating-linear-gradient(var(--color-wagon-blue-2) 0 15%, var(--color-wagon-blue-3) 15% 30%, var(--color-wagon-blue-4) 30% 45%);
     border-top      : solid 30px var(--color-wagon-blue-1);
@@ -372,7 +360,7 @@ h2.main-text {
 .slick-slide img {
     display   : block;
     padding   : 20px;
-    max-height: 600px;
+    max-height: 400px;
 }
 
 .slick-prev {
@@ -400,10 +388,6 @@ h2.main-text {
     color: var(--color-wagon-blue-1);
 }
 
-/* .slick-dotted.slick-slider {
-    margin-bottom: 80px;
-} */
-
 .slick-dots {
     bottom: inherit;
 }
@@ -419,7 +403,6 @@ h2.main-text {
     height: 30px;
 }
 
-
 .slick-dots li button:before {
     font-size  : 30px;
     width      : 30px;
@@ -427,14 +410,13 @@ h2.main-text {
     line-height: 30px;
 }
 
-
 /* footer  */
 .main-footer {
-    border-top: solid 30px var(--color-wagon-blue-1);
+    border-top      : solid 30px var(--color-wagon-blue-1);
     background-color: var(--color-wagon-blue-2);
-    font-family: "Ranchers-Regular";
-    letter-spacing: 2px;
-    padding: 40px 0;
+    font-family     : "Ranchers-Regular";
+    letter-spacing  : 2px;
+    padding         : 40px 0;
 }
 
 .main-footer p {
@@ -442,6 +424,8 @@ h2.main-text {
     color     : white;
     text-align: center;
     padding   : 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 @keyframes move {
@@ -524,8 +508,6 @@ h2.main-text {
         width: 320px;
         top  : 45px;
     }
-
-    /* _____________________________ */
 
     .wagon {
         width        : 160px;
@@ -620,10 +602,6 @@ h2.main-text {
         font-size: 12px;
     }
 
-    #cloud {
-        /* top: 18%; */
-    }
-
     .teddy-bear {
         width: 240px;
         top  : -40px;
@@ -632,6 +610,7 @@ h2.main-text {
     .main-text {
         font-size: 15rem;
     }
+
     .congratulation {
         margin-top: 100px;
     }
@@ -649,12 +628,6 @@ h2.main-text {
 
     .congratulation {
         margin-top: 40px;
-    }
-
-    #cloud {
-        /* transform: scale(.8);
-        left     : 0%;
-        top      : 105px; */
     }
 
     .title {
@@ -789,7 +762,6 @@ h2.main-text {
 
 }
 
-
 @media only screen and (max-width: 640px) {
     .slider {
         max-width: 75%;
@@ -816,10 +788,11 @@ h2.main-text {
     }
 
     #cloud {
-        top: -37px;
+        top      : -37px;
         transform: scale(1);
-        left: 0;
+        left     : 0;
     }
+
     .main-footer {
         padding: 20px 0;
     }
@@ -841,10 +814,6 @@ h2.main-text {
     .teddy-bear {
         width: 140px;
     }
-
-    #cloud {
-        /* top: 43px; */
-    }
 }
 
 @media only screen and (max-width: 460px) {
@@ -860,15 +829,10 @@ h2.main-text {
         width: 120px;
     }
 
-    #cloud {
-        /* transform: scale(.6); */
-        /* left     : -2%;
-        top      : 17px; */
-    }
-
     .wagon-wrapper-02 {
         display: none;
     }
+
     .slider {
         margin: 10px auto 110px;
     }
@@ -885,10 +849,6 @@ h2.main-text {
         top  : -20px;
     }
 
-    #cloud {
-        /* top: 4px; */
-    }
-
     .slider .slick-dots {
         visibility: hidden;
     }
@@ -900,9 +860,11 @@ h2.main-text {
     h2.main-text {
         font-size: 7rem;
     }
+
     .slider {
         margin: 10px auto 10px;
     }
+
     .slick-dotted.slick-slider {
         margin-bottom: 0;
     }
@@ -925,7 +887,7 @@ h2.main-text {
 
     #cloud {
         transform: scale(.8);
-        left: -20px;
+        left     : -20px;
     }
 
     .title {
@@ -945,11 +907,6 @@ h2.main-text {
 
 
 @media only screen and (max-width: 320px) {
-    #cloud {
-        /* top : -12px;
-        left: 12px; */
-    }
-
     .slider {
         max-width: 65%;
     }
